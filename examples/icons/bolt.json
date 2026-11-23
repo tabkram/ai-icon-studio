@@ -1,0 +1,19 @@
+{
+ "name": "bolt",
+ "label": "Bolt",
+ "els": [
+  {
+   "d": "M27 4L10 27h12l-2 17 18-24H26Z",
+   "role": "shape",
+   "c": "sun"
+  }
+ ],
+ "variants": [
+  "plus",
+  "minus",
+  "trash",
+  "search",
+  "cross",
+  "check"
+ ]
+}

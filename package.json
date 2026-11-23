@@ -1,0 +1,55 @@
+{
+  "name": "ai-icon-studio",
+  "version": "0.1.0",
+  "description": "A generic icon generator: draw an icon in code, get line, tinted, colour and animated SVG, an icon font and a catalogue.",
+  "license": "MIT",
+  "keywords": [
+    "icons",
+    "svg",
+    "icon-font",
+    "animation",
+    "generator",
+    "design-system"
+  ],
+  "bin": {
+    "ai-icon-studio": "bin/ai-icon-studio.mjs"
+  },
+  "files": [
+    "bin",
+    "engine",
+    "examples",
+    ".claude/skills",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "drafts": "node bin/ai-icon-studio.mjs build --icons drafts --out dist-drafts",
+    "build": "node bin/ai-icon-studio.mjs build --icons examples/icons",
+    "build:font": "ICONS_PYTHON=.venv/bin/python node bin/ai-icon-studio.mjs build --icons examples/icons --font",
+    "check:font": "ICONS_DIST=dist .venv/bin/python engine/check-font.py",
+    "docs:gallery": "node docs/scripts/gallery.mjs",
+    "docs:dev": "npm run docs:gallery && npm --prefix docs run dev",
+    "docs:build": "npm run docs:gallery && npm --prefix docs run build"
+  },
+  "main": "engine/render.js",
+  "exports": {
+    ".": {
+      "import": "./engine/index.mjs",
+      "require": "./engine/render.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tabkram/ai-icon-studio.git"
+  },
+  "homepage": "https://tabkram.github.io/ai-icon-studio/",
+  "bugs": {
+    "url": "https://github.com/tabkram/ai-icon-studio/issues"
+  }
+}

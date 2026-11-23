@@ -1,0 +1,14 @@
+{
+  "name": "ai-icon-studio-docs",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Documentation site for ai-icon-studio. Kept separate from the package.",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

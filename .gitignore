@@ -1,0 +1,9 @@
+node_modules/
+.venv/
+.DS_Store
+dist/
+docs/public/gallery/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
+dist-drafts
+.idea
